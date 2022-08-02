@@ -24,7 +24,6 @@ def online_logger(record_train_iter: bool = False, train_show_freq: int = 100) -
                 output = ctx.train_output.pop()  # only use latest output
             else:
                 output = ctx.train_output
-            # TODO(nyz) ppo train log case
             if isinstance(output, List):
                 raise NotImplementedError
             for k, v in output.items():
